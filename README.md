@@ -2,7 +2,7 @@
 
 Asks for bot token and port to server on load
 
-modify and use elsewhere please :)
+modify and use as you please :)
 
 # If you want to give me a tip i accept Monero:
 

@@ -1,0 +1,21 @@
+{
+  "name": "discord-websocket-app",
+  "version": "1.0.0",
+  "description": "A WebSocket application that reads messages from a Discord server and displays the number of bot calls made.",
+  "main": "src/index.ts",
+  "scripts": {
+    "start": "ts-node src/index.ts",
+    "build": "tsc"
+  },
+  "dependencies": {
+    "discord.js": "^14.0.0",
+    "ws": "^8.0.0"
+  },
+  "devDependencies": {
+    "typescript": "^4.0.0",
+    "ts-node": "^10.0.0",
+    "@types/node": "^16.0.0",
+    "@types/ws": "^8.0.0"
+  },
+  "license": "MIT"
+}

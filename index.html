@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bot Call Count</title>
+</head>
+<body>
+    <h1>Bot Call Count</h1>
+    <div id="count">0</div>
+    <h2>Messages</h2>
+    <ul id="messages"></ul>
+
+    <script>
+        const countDiv = document.getElementById('count');
+        const messagesList = document.getElementById('messages');
+        const ws = new WebSocket('ws://localhost:8080/ws');
+
+        ws.onmessage = function(event) {
+            const data = JSON.parse(event.data);
+            countDiv.textContent = data.count;
+
+            const li = document.createElement('li');
+            li.textContent = data.message;
+            messagesList.appendChild(li);
+        };
+
+        ws.onclose = function() {
+            console.log('WebSocket connection closed');
+        };
+    </script>
+</body>
+</html>

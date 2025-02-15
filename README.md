@@ -1,6 +1,6 @@
 # On load:
 
-Asks for bot token and port to server on load
+Asks for bot token and port to serve on load
 
 modify and use as you please :)
 
